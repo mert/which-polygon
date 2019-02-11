@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="tr-city-geojson.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="tr-city-geojson.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="GeoJSON.Net" Version="1.1.70" />
+  </ItemGroup>
+
+</Project>
